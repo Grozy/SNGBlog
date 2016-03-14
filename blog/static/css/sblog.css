@@ -5,3 +5,9 @@
 	padding: 0;
 	margin: 0;
 }
+
+#top_nav li{
+	float: left;
+	padding: 20;
+	list-sytle:none;
+}
