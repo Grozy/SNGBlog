@@ -1,0 +1,43 @@
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html"/>
+	<title>Site</title>
+	<link href="static/css/sblog.css" rel="stylesheet" type="text/css"/>
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<div id="top">
+				<div id="nav_div">
+					<ul id="top_nav">
+						<li><a href="#">博客列表</a></li>
+						<li><a href="#">游戏</a></li>
+						<li><a href="#">关于</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	{% for blog in blogs %}
+		<div class="blog_body">
+		  <div class="blog_title">标题：{{ blog.caption }}</div>
+		  <div class="blog_info">
+		    <ul class="blog_info_list">
+		       <li>分类: {{ blog.classification }}</li>
+		       <li>发表时间: {{ blog.publish_time |date:"Y-m-d H:i"}}</li>
+		       <li>标签：
+		           {% for tag in blog.tags.all %}
+			      {{ tag.tag_name }}
+		           {% endfor %}
+		       </li>
+		    </ul>
+		  </div>
+		  <div class="blog_description">
+		    {{ blog.content}}
+		  </div>
+		</div>
+	{% endfor %}	
+</body>	
+</html>
+
+

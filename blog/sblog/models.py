@@ -33,6 +33,9 @@ class Article(models.Model):
     tags = models.ManyToManyField(Tag, blank=True)
     content = models.TextField()
 
+    def __unicode__(self):
+        return self.caption
+
 admin.site.register(Author)
 admin.site.register(Tag)
 admin.site.register(Article)

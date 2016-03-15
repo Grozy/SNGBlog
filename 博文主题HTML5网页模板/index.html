@@ -18,9 +18,9 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="static/css/zerogrid.css">
-	<link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/responsive.css">
+  	<link rel="stylesheet" href="css/zerogrid.css">
+	<link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 	
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
@@ -34,7 +34,7 @@
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
 	
-	<link href='static/images/favicon.ico' rel='icon' type='image/x-icon'/>
+	<link href='./images/favicon.ico' rel='icon' type='image/x-icon'/>
     
 </head>
 <body>
@@ -42,7 +42,7 @@
 <!--------------Header--------------->
 <header>
 	<div class="wrap-header zerogrid">
-		<div id="logo"><a href="http://www.huiyi8.com"><img src="static/images/logo.png"/></a></div>
+		<div id="logo"><a href="http://www.huiyi8.com"><img src="./images/logo.png"/></a></div>
 		<nav>
 			<div class="wrap-nav">
 				<div class="menu">
@@ -64,19 +64,17 @@
 	<div class="wrap-content zerogrid">
 		<div class="row block">
 			<div id="main-content" class="col-2-3">
-				
-				{% if newest %}
 				<div class="row">
 					<div class="col-full">
 						<div class="wrap-col">
 							<article>
-								<div class="heading"><h2 class="title"><a href="#">{{ newest.caption }}</a></h2></div>
-								<img src="static/images/img1.jpg"/>
+								<div class="heading"><h2 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h2></div>
+								<img src="images/img1.jpg"/>
 								<div class="content">
-									<p>{{ newest.content }}</p>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam viverra convallis auctor. Sed accumsan libero quis mi commodo et suscipit enim lacinia. Morbi rutrum vulputate est sed faucibus. Nulla sed nisl mauris, id tristique tortor. Sed iaculis dapibus urna nec dictum. Proin non enim odio. Proin vitae turpis libero, eget feugiat enim. Sed fringilla facilisis convallis.</p>
 								</div>
 								<div class="extra">
-									<div class="info">By {{ newest.author.name }} on {{ newest.update_time }} - <a href="#">01 Commnets</a></div>
+									<div class="info">By Admin on December 01, 2012 - <a href="#">01 Commnets</a></div>
 									<div class="more"><a class="button" href="#">Read more >></a></div>
 									<div class="clear"></div>
 								</div>
@@ -84,15 +82,12 @@
 						</div>
 					</div>
 				</div>
-				{% endif %}
-				{% for row in others %}
-					<div class="row">
-				    {% for col in row %}
-				    		<div class="col-1-2">
+				<div class="row">
+					<div class="col-1-2">
 						<div class="wrap-col">
 							<article>
-								<div class="heading"><h2 class="title2"><a href="#">{{ col.caption }}</a></h2></div>
-								<img src="static/images/img2.jpg"/>
+								<div class="heading"><h2 class="title2"><a href="#">Quis mi commodo et suscipit</a></h2></div>
+								<img src="images/img2.jpg"/>
 								<div class="extra">
 									<div class="info"><a href="#">04 Commnets</a></div>
 									<div class="more"><a class="button" href="#">Read more >></a></div>
@@ -101,17 +96,56 @@
 							</article>
 						</div>
 					</div>
-				    {% endfor %}
-    					</div>
-				{% endfor %}
+					<div class="col-1-2">
+						<div class="wrap-col">
+							<article>
+								<div class="heading"><h2 class="title2"><a href="#">Sed fringilla facilisis convallis</a></h2></div>
+								<img src="images/img3.jpg"/>
+								<div class="extra">
+									<div class="info"><a href="#">12 Commnets</a></div>
+									<div class="more"><a class="button" href="#">Read more >></a></div>
+									<div class="clear"></div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-1-2">
+						<div class="wrap-col">
+							<article>
+								<div class="heading"><h2 class="title2"><a href="#">Consectetur adipiscing elit</a></h2></div>
+								<img src="images/img4.jpg"/>
+								<div class="extra">
+									<div class="info"><a href="#">09 Commnets</a></div>
+									<div class="more"><a class="button" href="#">Read more >></a></div>
+									<div class="clear"></div>
+								</div>
+							</article>
+						</div>
+					</div>
+					<div class="col-1-2">
+						<div class="wrap-col">
+							<article>
+								<div class="heading"><h2 class="title2"><a href="#">Proin vitae turpis libero</a></h2></div>
+								<img src="images/img5.jpg"/>
+								<div class="extra">
+									<div class="info"><a href="#">06 Commnets</a></div>
+									<div class="more"><a class="button" href="#">Read more >></a></div>
+									<div class="clear"></div>
+								</div>
+							</article>
+						</div>
+					</div>
+				</div>
 			</div>
-			<!--<div id="sidebar" class="col-1-3">
+			<div id="sidebar" class="col-1-3">
 				<div class="wrap-col">
 					<div class="box">
 						<div class="heading"><h4 class="title">Connect Us</h4></div>
 						<div class="content">
 							<div class="connect">
-								<a href="#"><img src="static/images/socials/facebook-icon.png" title="facebook"/></a><a href="#"><img src="static/images/socials/google-plus-icon.png" title="google plus"/></a><a href="#"><img src="static/images/socials/twitter-icon.png" title="twitter" /></a><a href="#"><img src="static/images/socials/pinterest-icon.png" title="pin"/></a><a href="#"><img src="static/images/socials/rss-icon.png" title="rss"/></a>
+								<a href="#"><img src="images/socials/facebook-icon.png" title="facebook"/></a><a href="#"><img src="images/socials/google-plus-icon.png" title="google plus"/></a><a href="#"><img src="images/socials/twitter-icon.png" title="twitter" /></a><a href="#"><img src="images/socials/pinterest-icon.png" title="pin"/></a><a href="#"><img src="images/socials/rss-icon.png" title="rss"/></a>
 							</div>
 						</div>
 					</div>
@@ -119,11 +153,11 @@
 						<div class="heading"><h4 class="title">Popular Post</h4></div>
 						<div class="content">
 							<div class="post">
-								<img src="static/images/img2.jpg"/>
+								<img src="images/img2.jpg"/>
 								<h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
 							</div>
 							<div class="post last">
-								<img src="static/images/img4.jpg"/>
+								<img src="images/img4.jpg"/>
 								<h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
 							</div>
 						</div>
@@ -145,29 +179,29 @@
 						<div class="heading"><h4 class="title">Random Post</h4></div>
 						<div class="content">
 							<div class="post">
-								<img src="static/images/img1[thumb].jpg"/>
+								<img src="images/img1[thumb].jpg"/>
 								<h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
 								<p>November 11 ,2012</p>
 							</div>
 							<div class="post">
-								<img src="static/images/img3[thumb].jpg"/>
+								<img src="images/img3[thumb].jpg"/>
 								<h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
 								<p>November 11 ,2012</p>
 							</div>
 							<div class="post last">
-								<img src="static/images/img5[thumb].jpg"/>
+								<img src="images/img5[thumb].jpg"/>
 								<h5 class="title"><a href="#">Lorem ipsum dolor sit amet</a></h5>
 								<p>November 11 ,2012</p>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>-->
+			</div>
 		</div>
 	</div>
 </section>
 <!--------------Footer--------------->
-<!--<footer>
+<footer>
 	<div class="wrap-footer zerogrid">
 		<div class="row">
 			<div class="col-1-3">
@@ -175,7 +209,7 @@
 					<div class="box">
 						<div class="heading"><h4 class="title">Image Gallery</h4></div>
 						<div class="content gallery">
-							<a href="#"><img src="static/images/img5.jpg" width="120"/></a><a href="#"><img src="images/img4.jpg" width="120"/></a><a href="#"><img src="images/img3.jpg" width="120"/></a><a href="#"><img src="static/images/img2.jpg" width="120"/></a><a href="#"><img src="static/images/img1.jpg" width="120"/></a><a href="#"><img src="static/images/img4.jpg" width="120"/></a>
+							<a href="#"><img src="images/img5.jpg" width="120"/></a><a href="#"><img src="images/img4.jpg" width="120"/></a><a href="#"><img src="images/img3.jpg" width="120"/></a><a href="#"><img src="images/img2.jpg" width="120"/></a><a href="#"><img src="images/img1.jpg" width="120"/></a><a href="#"><img src="images/img4.jpg" width="120"/></a>
 						</div>
 					</div>
 				</div>
@@ -185,7 +219,7 @@
 					<div class="box">
 						<div class="heading"><h4 class="title">About Us</h4></div>
 						<div class="content">
-							<a href="http://www.huiyi8.com" target="_blank"><img src="static/images/zerotheme.png" style="border: 0px; margin: 10px 0;"/></a>
+							<a href="http://www.huiyi8.com" target="_blank"><img src="images/zerotheme.png" style="border: 0px; margin: 10px 0;"/></a>
 							<p><a href="http://www.huiyi8.com" target="_blank">Free Html5 Templates</a> created by <a href="http://www.huiyi8.com">Zerotheme</a>. You can use and modify the template for both personal and commercial use. You must keep all copyright information and credit links in the template and associated files.</p>
 						</div>
 					</div>
@@ -209,7 +243,7 @@
 	<div class="copyright">
 		<p>&copy; Copyright &copy; 2014.Company name All rights reserved.<a target="_blank" href="http://www.huiyi8.com/moban/">&#x7F51;&#x9875;&#x6A21;&#x677F;</a></p>
 	</div>
-</footer>-->
+</footer>
 
 </div>
 </body></html>
