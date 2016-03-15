@@ -66,7 +66,8 @@ DATABASES = {
 }
 
 TEMPLATE_DIRS = (
-    '/Users/syswin-sungzuozhi/git/django/blog/templates',
+#    '/Users/syswin-sungzuozhi/git/django/blog/templates',
+     os.path.join(BASE_DIR, 'templates'),
 )
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
