@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib import admin
+from django_markdown.models import MarkdownField
 
 # Create your models here.
 class Tag(models.Model):
@@ -31,7 +32,7 @@ class Article(models.Model):
     author = models.ForeignKey(Author)
     classification = models.ForeignKey(Classification)
     tags = models.ManyToManyField(Tag, blank=True)
-    content = models.TextField()
+    content = MarkdownField()
 
     def __unicode__(self):
         return self.caption

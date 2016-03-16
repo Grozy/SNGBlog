@@ -1,23 +1,24 @@
 from sblog.models import Article, Tag, Classification, Author
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-
-import os
-from blog.settings import BASE_DIR
+from markdown import markdown
 
 def blog_list(request):
     blogs = Article.objects.all().order_by('-publish_time')
+    for post in blogs:
+        post.content = markdown(post.content)
+
+    classifications = Classification.objects.all()
     number_of_blogs = len(blogs)
+
     params = {}
 
-    print(os.path.join(BASE_DIR, "static/"))
+    params['classifications'] = classifications
 
     if number_of_blogs > 0:
         blog = blogs[0]
         params['newest'] = blog
         params['others'] = []
-
-
 
         if number_of_blogs > 1:
             other_blogs = blogs[1:]
@@ -38,8 +39,6 @@ def blog_list(request):
 
             params['others'] = rows
 
-
-    print(params)
     return render_to_response('index.html', params, context_instance=RequestContext(request))
 # Create your views here.
 
