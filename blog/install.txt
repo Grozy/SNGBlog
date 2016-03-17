@@ -1,2 +1,3 @@
-sudo pip install django-markdown
-sudo pip install markdown
+sudo pip install django-markdown    admin管理页支持markdown
+sudo pip install markdown           html解析markdown
+sudo pip install pygments

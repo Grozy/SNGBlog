@@ -6,7 +6,7 @@ from markdown import markdown
 def blog_list(request):
     blogs = Article.objects.all().order_by('-publish_time')
     for post in blogs:
-        post.content = markdown(post.content)
+        post.content = markdown(post.content, extensions=['markdown.extensions.extra'])
 
     classifications = Classification.objects.all()
     number_of_blogs = len(blogs)
