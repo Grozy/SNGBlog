@@ -25,7 +25,7 @@ class Author(models.Model):
     	return u'%s' %(self.name)
 
 class Article(models.Model):
-    caption = models.CharField(max_length=30)
+    caption = models.CharField(max_length=50)
     subcaption = models.CharField(max_length=50, blank=True)
     publish_time = models.DateTimeField(auto_now_add=True)
     update_time = models.DateTimeField(auto_now=True)
