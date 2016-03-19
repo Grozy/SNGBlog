@@ -3,7 +3,7 @@ from django.template import RequestContext
 from django.shortcuts import render_to_response
 from markdown import markdown
 
-def blog_list(request):
+def index(request):
     blogs = Article.objects.all().order_by('-publish_time')
     for post in blogs:
         post.content = markdown(post.content, extensions=['markdown.extensions.extra'])
@@ -40,5 +40,26 @@ def blog_list(request):
             params['others'] = rows
 
     return render_to_response('index.html', params, context_instance=RequestContext(request))
+
+def blog_list(request):
+    blogs = Article.objects.all().order_by('-publish_time')
+    for post in blogs:
+        post.content = markdown(post.content, extensions=['markdown.extensions.extra'])
+
+    classifications = Classification.objects.all()
+    number_of_blogs = len(blogs)
+
+    params = {}
+
+    params['classifications'] = classifications
+
+    if number_of_blogs > 0:
+        params['blogs'] = blogs
+
+    return render_to_response('bloglist.html', params, context_instance=RequestContext(request))
+
+def blog(request, blog_id):
+    print blog_id
+    return render_to_response('blog.html', {}, context_instance=RequestContext(request))
 # Create your views here.
 

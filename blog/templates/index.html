@@ -1,67 +1,6 @@
-<meta name="baidu-site-verification" content="koJZE8RVTO" />
-<!DOCTYPE html>
-<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
-<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
-<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
-<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
-<head>
-
-    <!-- Basic Page Needs
-  ================================================== -->
-	<meta charset="utf-8">
-	<title>Sng的个人小站</title>
-	<meta name="description" content="技术和生活分享">
-	<meta name="author" content="www.huiyi8.com">
-	
-    <!-- Mobile Specific Metas
-  ================================================== -->
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    
-    <!-- CSS
-  ================================================== -->
-  	<link rel="stylesheet" href="static/css/zerogrid.css">
-	<link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/responsive.css">
-	
-	<!--[if lt IE 8]>
-       <div style=' clear: both; text-align:center; position: relative;'>
-         <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-           <img src="http://storage.ie6countdown.com/assets/100/images/banners/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today." />
-        </a>
-      </div>
-    <![endif]-->
-    <!--[if lt IE 9]>
-		<script src="js/html5.js"></script>
-		<script src="js/css3-mediaqueries.js"></script>
-	<![endif]-->
-	
-	<link href='static/images/favicon.ico' rel='icon' type='image/x-icon'/>
-    
-</head>
-<body>
-<div class="wrap-body">
-<!--------------Header--------------->
-<header>
-	<div class="wrap-header zerogrid">
-		<div id="logo"><a href="http://www.huiyi8.com"><img src="static/images/logo.png"/></a></div>
-		<nav>
-			<div class="wrap-nav">
-				<div class="menu">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="blog.html">Blog</a></li>
-						<li><a href="blog.html">Gallery</a></li>
-						<li><a href="blog.html">About</a></li>
-						<li><a href="http://www.huiyi8.com">Contact</a></li>
-					</ul>
-				</div>
-			</div>
-		</nav>
-	</div>
-</header>
-
-<!--------------Content--------------->
-<section id="content">
+{% extends "template.html" %}
+{% block content %}
+	<section id="content">
 	<div class="wrap-content zerogrid">
 		<div class="row block">
 			<div id="main-content" class="col-2-3">
@@ -72,7 +11,6 @@
 						<div class="wrap-col">
 							<article>
 								<div class="heading"><h2 class="title"><a href="#">{{ newest.caption }}</a></h2></div>
-								<img src="static/images/img1.jpg"/>
 								<div class="content">
 									{{ newest.content|safe }}
 								</div>
@@ -166,6 +104,9 @@
 		</div>
 	</div>
 </section>
+{% endblock %}
+<!--------------Content--------------->
+
 <!--------------Footer--------------->
 <!--<footer>
 	<div class="wrap-footer zerogrid">

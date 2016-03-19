@@ -1,0 +1,58 @@
+<!--------------Content--------------->
+{% extends "template.html" %}
+	{% block content %}
+		<section id="content">
+			<div class="wrap-content zerogrid">
+				<div class="row block">
+					<div id="main-content" class="col-2-3">
+						{% for blog in blogs %}
+							<div class="row">
+								<div class="col-full">
+									<div class="wrap-col">
+									<article>
+										<div class="heading"><h2 class="title"><a href="/blog/{{ blog.id }}">{{ blog.caption }}</a></h2></div>
+										<div class="content">
+											{{ blog.content|safe }}
+										</div>
+										<div class="extra">
+											<div class="info">By {{ blog.author.name }} on {{ blog.update_time }} - <a href="#">01 Commnets</a></div>
+											<div class="more"><a class="button" href="#">Read more >></a></div>
+											<div class="clear"></div>
+										</div>
+									</article>
+								</div>
+							</div>
+						</div>
+						{% endfor %}
+						
+					</div>
+					<div id="sidebar" class="col-1-3">
+						<div class="wrap-col">
+							<div class="box">
+								<div class="heading"><h4 class="title">Connect Us</h4></div>
+								<div class="content">
+									<div class="connect">
+										<a href="#"><img src="static/images/socials/facebook-icon.png" title="facebook"/></a><a href="#"><img src="static/images/socials/google-plus-icon.png" title="google plus"/></a><a href="#"><img src="static/images/socials/twitter-icon.png" title="twitter" /></a><a href="#"><img src="static/images/socials/pinterest-icon.png" title="pin"/></a><a href="#"><img src="static/images/socials/rss-icon.png" title="rss"/></a>
+									</div>
+								</div>
+							</div>
+							
+							<div class="box">
+								<div class="heading"><h4 class="title">Categories</h4></div>
+								
+								<div class="content">
+									<ul>
+										{% for classification in classifications %}
+											<li><a href="http://www.huiyi8.com">{{ classification.name }}</a></li>
+										{% endfor %}
+										<li class="last"><a href="http://www.huiyi8.com">更多</a></li>
+									</ul>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	{% endblock %}
