@@ -88,6 +88,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+STATIC_PATH = os.path.join(os.path.dirname(__file__), 'static')
+
 # STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
@@ -97,15 +99,4 @@ STATIC_ROOT = os.path.join(SITE_ROOT, 'collectedstatic')
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
-)
-
-# The default file storage backend used during the build process
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
-
-# List of finder classes that know how to find static files in
-# various locations.
-STATICFILES_FINDERS = (
-'django.contrib.staticfiles.finders.FileSystemFinder',
-'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-# 'django.contrib.staticfiles.finders.DefaultStorageFinder',
 )
