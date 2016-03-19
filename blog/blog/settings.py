@@ -98,3 +98,14 @@ STATIC_ROOT = os.path.join(SITE_ROOT, 'collectedstatic')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"),
 )
+
+# The default file storage backend used during the build process
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
+
+# List of finder classes that know how to find static files in
+# various locations.
+STATICFILES_FINDERS = (
+'django.contrib.staticfiles.finders.FileSystemFinder',
+'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+# 'django.contrib.staticfiles.finders.DefaultStorageFinder',
+)
