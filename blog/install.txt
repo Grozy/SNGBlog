@@ -1,3 +1,7 @@
 sudo pip install django-markdown    admin管理页支持markdown
 sudo pip install markdown           html解析markdown
 sudo pip install pygments
+
+Jinja2 模板 替代django的模板
+sudo easy_install Jinja2
+sudo pip install Jinja2
