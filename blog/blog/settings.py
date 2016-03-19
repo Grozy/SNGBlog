@@ -93,7 +93,7 @@ STATIC_PATH = os.path.join(os.path.dirname(__file__), 'static')
 # STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 
 SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
-SITE_ROOT = os.path.abspath(os.path.join(SITE_ROOT, '../'))
+SITE_ROOT = os.path.abspath(os.path.join(SITE_ROOT, '/'))
 
 STATIC_ROOT = os.path.join(SITE_ROOT, 'collectedstatic')
 
