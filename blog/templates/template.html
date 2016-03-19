@@ -19,9 +19,9 @@
     
     <!-- CSS
   ================================================== -->
-  	<link rel="stylesheet" href="static/css/zerogrid.css">
-	<link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/responsive.css">
+  	<link rel="stylesheet" href="{{ STATIC_URL }}css/zerogrid.css">
+	<link rel="stylesheet" href="{{ STATIC_URL }}css/style.css">
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/responsive.css">
 	
 	<!--[if lt IE 8]>
        <div style=' clear: both; text-align:center; position: relative;'>
@@ -35,7 +35,7 @@
 		<script src="js/css3-mediaqueries.js"></script>
 	<![endif]-->
 	
-	<link href='static/images/favicon.ico' rel='icon' type='image/x-icon'/>
+	<link href='/static/admin/images/favicon.ico' rel='icon' type='image/x-icon'/>
     
 </head>
 <body>
@@ -43,7 +43,7 @@
 <!--------------Header--------------->
 <header>
 	<div class="wrap-header zerogrid">
-		<div id="logo"><a href="http://www.huiyi8.com"><img src="static/images/logo.png"/></a></div>
+		<div id="logo"><a href="http://www.huiyi8.com"><img src="{{ STATIC_URL }}images/logo.png"/></a></div>
 		<nav>
 			<div class="wrap-nav">
 				<div class="menu">
